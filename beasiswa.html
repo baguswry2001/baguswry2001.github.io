@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Mahasiswa</title>
+    <style>
+        body {
+            font-family: 'Lato', sans-serif;
+            background-color: #eef2f7;
+            margin: 0;
+            padding: 0;
+        }
+        .donation-section {
+        margin-top: 20px;
+        padding: 20px;
+        background: #f9f9f9;
+        border-radius: 8px;
+        box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+        text-align: center;
+    }
+    .qris-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+    }
+    .qris-container img {
+        width: 250px;
+        border-radius: 10px;
+    }
+    .qris-text {
+        text-align: left;
+        max-width: 400px;
+    }
+    .qris-text h3 {
+        margin-bottom: 10px;
+    }
+    .qris-text p {
+        font-size: 16px;
+        font-weight: 500;
+    }
+    .progress-container {
+        margin-top: 15px;
+        text-align: center;
+    }
+    .progress-bar {
+        width: 100%;
+        background: #ddd;
+        border-radius: 10px;
+        overflow: hidden;
+        height: 20px;
+        position: relative;
+    }
+    .progress-fill {
+        height: 100%;
+        background: #4caf50;
+        width: 0%;
+        transition: width 0.5s ease-in-out;
+    }
+    .progress-text {
+        margin-top: 5px;
+        font-size: 20px;
+        font-weight: bold;
+    }
+        .container {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .header {
+            background: linear-gradient(135deg, #1E88E5, #42A5F5);
+            color: white;
+            padding: 20px;
+            border-radius: 10px 10px 0 0;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .profile {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        .profile img {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid white;
+            box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+            margin-right: 20px;
+        }
+        .details {
+            text-align: left;
+            background: #f9f9f9;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+        }
+        .details p {
+            margin: 8px 0;
+            font-size: 16px;
+            font-weight: 500;
+        }
+        .pddikti-btn {
+            display: inline-block;
+            margin: 10px 5px;
+            padding: 10px 15px;
+            background: #1E88E5;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        .pddikti-btn:hover {
+            background: #1565C0;
+        }
+        .table-container {
+            margin-top: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        th, td {
+            padding: 12px;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background: #1E88E5;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background: #f2f2f2;
+        }
+        tfoot {
+            font-weight: bold;
+            background: #e0e0e0;
+        }
+ 
+        .thank-you {
+            margin-top: 20px;
+            padding: 20px;
+            background: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+        }
+        .donation-section {
+            margin-top: 20px;
+            padding: 20px;
+            background: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .donation-section img {
+            width: 200px;
+            margin: 10px 0;
+            border-radius: 10px;
+        }
+        .donation-section p {
+            font-size: 16px;
+            font-weight: 500;
+        }
+        .saweria-container {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">Profil Mahasiswa</div>
+        <div class="profile">
+            <img src="https://i.pinimg.com/736x/d9/2f/68/d92f685786ba902135e7818b59b809b7.jpg" alt="Foto Mahasiswa">
+            <div class="details">
+                <p><strong>Nama : </strong> BAGUS WIRAYUDA</p>
+                <p><strong>NIM : </strong> 241230648</p>
+                <p><strong>PERGURUAN TINGGI : </strong> Universitas Sembilanbelas November Kolaka</p>
+                <p><strong>FAKULTAS : </strong> FAKULTAS TEKNOLOGI INFORMASI</p>
+                <p><strong>Program Studi : </strong>Sistem Informasi</p>
+                <a class="pddikti-btn" href="#" target="_blank">Lihat di PDDIKTI</a>
+                <a class="pddikti-btn" href="#" target="_blank">Transcript Nilai</a>
+                <a class="pddikti-btn" href="#" target="_blank">Proposal</a>
+            </div>
+        </div>
+        
+        <h2>Kebutuhan Anggaran Pendidikan <small>/ Semester</small></h2>
+        <div class="table-container">
+            <table>
+                <tr>
+                    <th>No</th>
+                    <th>Kebutuhan</th>
+                    <th>Jumlah</th>
+                    <th>Total</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Kos Kosan</td>
+                    <td>750.000/bulan</td>
+                    <td>4.500.000</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Service & bahan bakar kendaraan</td>
+                    <td>250.000/bulan</td>
+                    <td>1.500.000</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Konsumsi</td>
+                    <td>500.000/bulan</td>
+                    <td>3.000.000</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Listrik dan Internet</td>
+                    <td>200.000/bulan</td>
+                    <td>1.200.000</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Uang Kuliah Tunggal</td>
+                    <td>2.200.000/Semester</td>
+                    <td>2.200.000</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>ATK dan lainya</td>
+                    <td>100.000/bulan</td>
+                    <td>600.000</td>
+                </tr>
+                <tfoot>
+                    <tr>
+                        <td colspan="3">Total Keseluruhan</td>
+                        <td>13.000.000</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                const amount = 0; // Ganti angka ini dengan jumlah sumbangan yang terkumpul
+                const goal = 13000000;
+                const percentage = (amount / goal) * 100;
+                document.querySelector(".progress-fill").style.width = percentage + "%";
+                document.querySelector(".progress-text").innerText = `Terkumpul: Rp ${amount.toLocaleString()} / Rp 13.000.000`;
+            });
+        </script>
+        
+        <div class="container">
+            <div class="donation-section">
+                <div class="qris-container">
+                    <img src="https://cdn.asp.events/CLIENT_CL_Conf_BDA05934_5056_B731_4C9EEBBE0C2416C2/sites/TTG-2021/media/article-images/Aztec%20Barcode.png" alt="QRIS Sumbangan">
+                    <div class="qris-text">
+                        <h3>Dukung saya dengan QRIS</h3>
+                        <p>Jika anda ingin mendukung saya secara personal anda dapat mengunakan qris berikut untuk mendukung saya dalam perjalanan pendidikan saya</p>
+                        <p>Scan QRIS di atas untuk memberikan donasi dengan mudah.</p>
+                    </div>
+                </div>
+                
+
+            </div>
+        
+            <div class="donation-section">
+                <h3>Sumbangan via Saweria</h3>
+                <p>Anda juga dapat mendukung saya melalui Saweria. Terima kasih atas dukungan Anda!</p>
+                <div class="saweria-container">
+                    <!-- Paste kode elemen Saweria di sini -->
+                </div>
+            </div>
+            
+            <div class="progress-container">
+                <div class="progress-bar">
+                    <div class="progress-fill"></div>
+                </div>
+                <p class="progress-text">Terkumpul: Rp 0 / Rp 13.000.000</p>
+            </div>
+            <br><br>
+            <div class="thank-you">
+                <h3>Terima Kasih!</h3>
+                <p>Saya dengan tulus mengucapkan terima kasih atas kebaikan dan dukungan Anda dalam membantu perjalanan pendidikan saya. Setiap sumbangan yang diberikan adalah langkah besar menuju impian saya.<br>
+                Saya hanya memiliki satu harapan sederhana:<br>
+                <strong>"Saya ingin menempuh pendidikan dengan penuh semangat, tanpa dihantui rasa kantuk dan kelelahan."</strong><br>
+                Bantuan Anda tidak hanya meringankan langkah saya, tetapi juga memberi semangat baru untuk terus berjuang dan meraih masa depan yang lebih baik.</p>
+            </div>
+        </div>
+        
+        
+    </div>
+</body>
+</html>

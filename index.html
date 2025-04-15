@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<!-- Website - www.codingnepalweb.com -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>BAGUS WIRAYUDA</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Fontawesome CDN Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+        /* Google Font CDN Link */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  scroll-behavior: smooth;
+}
+/* Custom Scroll Bar CSS */
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+    background: #6e93f7;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #4070f4;
+}
+/* navbar styling */
+nav{
+  position: fixed;
+  width: 100%;
+  padding: 20px 0;
+  z-index: 998;
+  transition: all 0.3s ease;
+  font-family: 'Ubuntu', sans-serif;
+}
+nav.sticky{
+  background: #4070f4;
+  padding: 13px 0;
+}
+nav .navbar{
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+}
+nav .navbar .logo a{
+  font-weight: 500;
+  font-size: 35px;
+  color: #4070f4;
+}
+nav.sticky .navbar .logo a{
+  color: #fff;
+}
+nav .navbar .menu{
+  display: flex;
+  position: relative;
+}
+nav .navbar .menu li{
+  list-style: none;
+  margin: 0 8px;
+}
+.navbar .menu a{
+  font-size: 18px;
+  font-weight: 500;
+  color: #0E2431;
+  padding: 6px 0;
+  transition: all 0.4s ease;
+}
+.navbar .menu a:hover{
+  color: #4070f4;
+}
+nav.sticky .menu a{
+  color: #FFF;
+}
+nav.sticky .menu a:hover{
+  color: #0E2431;
+}
+.navbar .media-icons a{
+  color: #4070f4;
+  font-size: 18px;
+  margin: 0 6px;
+}
+nav.sticky .media-icons a{
+  color: #FFF;
+}
+/* Side Navigation Menu Button CSS */
+nav .menu-btn,
+.navbar .menu .cancel-btn{
+  position: absolute;
+  color: #fff;
+  right: 30px;
+  top: 20px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: none;
+}
+nav .menu-btn{
+  color: #4070f4;
+}
+nav.sticky .menu-btn{
+  color: #FFF;
+}
+.navbar .menu .menu-btn{
+  color: #fff;
+}
+/* home section styling */
+.home{
+  height: 100vh;
+  width: 100%;
+  background: url("images/background.png") no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  font-family: 'Ubuntu', sans-serif;
+}
+.home .home-content{
+  width: 90%;
+  height: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.home .text-one{
+  font-size: 25px;
+  color: #0E2431;
+}
+.home .text-two{
+  color: #0E2431;
+  font-size: 75px;
+  font-weight: 600;
+  margin-left: -3px;
+}
+.home .text-three{
+  font-size: 40px;
+  margin: 5px 0;
+  color: #4070f4;
+}
+.home .text-four{
+  font-size: 23px;
+  margin: 5px 0;
+  color: #0E2431;
+}
+.home .button{
+  margin: 14px 0;
+}
+.home .button button{
+  outline: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 25px;
+  font-weight: 400;
+  background: #4070f4;
+  color: #fff;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: all 0.4s ease;
+}
+.home .button button:hover{
+  border-color: #4070f4;
+  background-color: #fff;
+  color: #4070f4;
+}
+/* About Section Styling */
+/* Those Elements Where We Have Apply Same CSS,
+ I'm Selecting Directly 'Section Tag' and 'Class'  */
+section{
+  padding-top: 40px;
+}
+section .content{
+  width: 80%;
+  margin: 40px auto;
+  font-family: 'Poppins', sans-serif;
+}
+.about .about-details{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+section .title{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+section .title span{
+  color: #0E2431;
+  font-size: 30px;
+  font-weight: 600;
+  position: relative;
+  padding-bottom: 8px;
+}
+section .title span::before,
+section .title span::after{
+  content: '';
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background: #4070f4;
+  left: 0;
+  bottom: 0;
+}
+section .title span::after{
+  bottom: -7px;
+  width: 70%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.about .about-details .left{
+  width: 45%;
+}
+.about .left img{
+  height: 400px;
+  width: 400px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+.about-details .right{
+  width: 55%;
+}
+section  .topic{
+  color: #0E2431;
+  font-size: 25px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.about-details .right p{
+  text-align: justify;
+  color: #0E2431;
+}
+section .button{
+  margin: 16px 0;
+}
+section .button button{
+  outline: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-size: 25px;
+  font-weight: 400;
+  background: #4070f4;
+  color: #fff;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+section .button button:hover{
+  border-color: #4070f4;
+  background-color: #fff;
+  color: #4070f4;
+}
+ /* My Skills CSS */
+ .skills{
+   background: #F0F8FF;
+ }
+ .skills .content{
+   padding: 40px 0;
+ }
+ .skills .skills-details{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+ }
+ .skills-details .text{
+   width: 50%;
+ }
+ .skills-details p{
+   color: #0E2431;
+   text-align: justify;
+ }
+.skills .skills-details .experience{
+  display: flex;
+  align-items: center;
+  margin: 0 10px;
+}
+.skills-details .experience .num{
+  color: #0E2431;
+  font-size: 80px;
+}
+.skills-details .experience .exp{
+  color: #0E2431;
+  margin-left: 20px;
+  font-size: 18px;
+  font-weight: 500;
+  margin: 0 6px;
+}
+.skills-details .boxes{
+  width: 45%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.skills-details .box{
+  width: calc(100% / 2 - 20px);
+  margin: 20px 0;
+}
+.skills-details .boxes .topic{
+  font-size: 20px;
+  color: #4070f4;
+}
+.skills-details .boxes .per{
+  font-size: 60px;
+  color: #4070f4;
+}
+/* My Services CSS */
+.services .boxes{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.services .boxes .box{
+  margin: 20px 0;
+  width: calc(100% / 3 - 20px);
+  text-align: center;
+  border-radius: 12px;
+  padding: 30px 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.12);
+  cursor: default;
+  transition: all 0.4s ease;
+}
+.services .boxes .box:hover{
+  background: #4070f4;
+  color: #fff;
+}
+.services .boxes .box .icon{
+  height: 50px;
+  width: 50px;
+  background: #4070f4;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 50px;
+  font-size: 18px;
+  color: #fff;
+  margin: 0 auto 10px auto;
+  transition: all 0.4s ease;
+}
+.boxes .box:hover .icon{
+  background-color: #fff;
+  color: #4070f4;
+}
+.services .boxes .box:hover .topic,
+.services .boxes .box:hover p{
+  color: #0E2431;
+  transition: all 0.4s ease;
+}
+.services .boxes .box:hover .topic,
+.services .boxes .box:hover p{
+  color: #fff;
+}
+/* Contact Me CSS */
+.contact{
+  background: #F0F8FF;
+}
+.contact .content{
+  margin: 0 auto;
+  padding: 30px 0;
+}
+.contact .text{
+  width: 80%;
+  text-align: center;
+  margin: auto;
+}
+/* Footer CSS */
+footer{
+  background: #4070f4;
+  padding: 15px 0;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+}
+footer .text span{
+  font-size: 17px;
+  font-weight: 400;
+  color: #fff;
+}
+footer .text span a{
+  font-weight: 500;
+  color: #FFF;
+}
+footer .text span a:hover{
+  text-decoration: underline;
+}
+/* Scroll TO Top Button CSS */
+.scroll-button a{
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  color: #fff;
+  background: #4070f4;
+  padding: 7px 12px;;
+  font-size: 18px;
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.15);
+  display: none;
+}
+/* Responsive Media Query */
+@media (max-width: 1190px) {
+  section .content{
+    width: 85%;
+  }
+}
+@media (max-width: 1000px) {
+  .about .about-details{
+    justify-content: center;
+    flex-direction: column;
+  }
+  .about .about-details .left{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  .about-details .right{
+    width: 90%;
+    margin: 40px 0;
+  }
+  .services .boxes .box{
+    margin: 20px 0;
+    width: calc(100% / 2 - 20px);
+  }
+}
+@media (max-width: 900px) {
+  .about .left img{
+    height: 350px;
+    width: 350px;
+  }
+}
+@media (max-width: 750px) {
+  nav .navbar{
+    width: 90%;
+  }
+  nav .navbar .menu{
+    position: fixed;
+    left: -100%;
+    top: 0;
+    background: #0E2431;
+    height: 100vh;
+    max-width: 400px;
+    width: 100%;
+    padding-top: 60px;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.5s ease;
+  }
+  .navbar.active .menu{
+    left: 0;
+  }
+  nav .navbar .menu a{
+    font-size: 23px;
+    display: block;
+    color: #fff;
+    margin: 10px 0;
+  }
+  nav.sticky .menu a:hover{
+    color: #4070f4;
+  }
+  nav .navbar .media-icons{
+    display: none;
+  }
+  nav .menu-btn,
+  .navbar .menu .cancel-btn{
+    display: block;
+  }
+  .home .text-two{
+    font-size: 65px;
+  }
+  .home .text-three{
+    font-size: 35px;
+  }
+  .skills .skills-details{
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .skills-details .text{
+    width: 100%;
+    margin-bottom: 50px;
+  }
+  .skills-details .boxes{
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  .services .boxes .box{
+    margin: 20px 0;
+    width: 100%;
+  }
+  .contact .text{
+    width: 100%;
+}
+}
+@media (max-width: 500px){
+  .home .text-two{
+    font-size: 55px;
+  }
+  .home .text-three{
+    font-size: 33px;
+  }
+  .skills-details .boxes .per{
+    font-size: 50px;
+    color: #4070f4;
+  }
+}
+    </style>
+  </head>
+  <body>
+    <!-- Move to up button -->
+    <div class="scroll-button">
+      <a href="#home"><i class="fas fa-arrow-up"></i></a>
+    </div>
+    <!-- navgaition menu -->
+    <nav>
+      <div class="navbar">
+        <div class="logo"><a href="#">Welcome</a></div>
+        <ul class="menu">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">Tentang</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#services">Layanan</a></li>
+          <li><a href="#contact">Beasiswa</a></li>
+          <div class="cancel-btn">
+            <i class="fas fa-times"></i>
+          </div>
+        </ul>
+        <div class="media-icons">
+            <a href="https://web.facebook.com/bagus.wirayuda.71"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/bagus_wirayuda_/"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.tiktok.com/@bagus_wirayuda"><i class="fab fa-tiktok"></i></a>
+            <a href="https://api.whatsapp.com/send/?phone=6281356327655&text&type=phone_number&app_absent=0"><i class="fab fa-whatsapp"></i></a>
+            <a href="mailto:wirayuda101101@gmail.com"><i class="fas fa-envelope"></i></a>
+          </div>
+          
+          
+      </div>
+      <div class="menu-btn">
+        <i class="fas fa-bars"></i>
+      </div>
+    </nav>
+    <section class="home" id="home">
+      <div class="home-content">
+        <div class="text">
+          <div class="text-two">BAGUS WIRAYUDA</div>
+          <div class="text-three">Looking for a job</div>
+          <div class="text-four">From Kolaka indonesia</div>
+        </div>
+        <div class="button">
+          <button>Hire Me</button>
+          <button>Download CV</button>
+
+        </div>
+      </div>
+    </section>
+    <section class="about" id="about">
+      <div class="content">
+        <div class="title"><span>Tentang Saya</span></div>
+        <div class="about-details">
+          <div class="left">
+            <img src="images/about.jpg" alt="" />
+          </div>
+          <div class="right">
+            <div class="topic">KENALI SAYA</div>
+            <p>
+              Perkenalkan, saya Bagus Wirayuda dari Kolaka, Sulawesi Tenggara, Indonesia. Saat ini, saya merupakan mahasiswa Sistem Informasi yang memulai pendidikan sejak tahun 2024.
+              Saya berasal dari keluarga dengan keterbatasan ekonomi, namun hal itu tidak menghalangi tekad saya untuk terus berjuang demi pendidikan dan mengasah keterampilan di bidang teknologi. Saya yakin bahwa setiap usaha yang saya lakukan akan membuahkan hasil di masa depan.
+              Minat saya terhadap dunia teknologi sangat tinggi, dan hal ini menjadi dorongan utama saya untuk terus belajar, meskipun terkadang menghadapi berbagai tantangan. Saya adalah seorang pria berusia 23 tahun yang telah mendalami dunia IT sejak usia 15 tahun.
+              Saat ini, saya sangat mengharapkan dukungan serta motivasi dari teman-teman semua agar tetap semangat dalam perjalanan belajar dan berkembang di bidang teknologi.
+              Terima kasih.
+              </p>
+              
+            <!-- <div class="button">
+              <button>Download CV</button>
+            </div> -->
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- My Skill Section Start -->
+    <!-- Section Tag and Other Div will same where we need to put same CSS -->
+    <section class="skills" id="skills">
+      <div class="content">
+        <div class="title"><span>My Skills</span></div>
+        <div class="skills-details">
+          <div class="text">
+            <div class="topic">Skill dan pengetahuan</div>
+            <p>
+                Saya memiliki pemahaman yang baik tentang beberapa bahasa pemrograman, terutama <strong>Python, PHP, dan JavaScript</strong>. Saya terbiasa menggunakan berbagai framework dan library, seperti <strong>Laravel, CodeIgniter, Flask, dan Django</strong>. Selain itu, saya juga memiliki pengalaman dalam menggunakan beberapa library Python untuk pengembangan, termasuk <strong>OpenCV, MATLAB Engine, Pandas, Selenium, BeautifulSoup (BS4)</strong>, serta berbagai modul lainnya yang digunakan untuk <strong>klasifikasi, pemodelan, web scraping, dan pengelolaan data</strong>.  
+            </p>
+            
+            <p>
+                Saya belajar dari pengalaman melalui berbagai proyek yang pernah saya kerjakan. Awalnya, saya terlibat dalam proyek-proyek seperti pembuatan bot, manipulasi jaringan, web scraping, dan otomatisasi sistem. Dari pengalaman tersebut, saya mulai mengembangkan proyek yang lebih luas dan kompleks, seperti <strong>klasifikasi gambar, pengembangan website, sistem pakar, sistem pendukung keputusan, serta sistem informasi</strong>.  
+            </p>
+            
+            <div class="experience">
+              <div class="num">3</div>
+              <div class="exp">
+                Years Of <br />
+                Experience
+              </div>
+            </div>
+          </div>
+          <div class="boxes">
+            <div class="box">
+              <div class="topic">PYTHON</div>
+              <div class="per">90%</div>
+            </div>
+            <div class="box">
+              <div class="topic">PHP</div>
+              <div class="per">80%</div>
+            </div>
+            <div class="box">
+              <div class="topic">JavScript</div>
+              <div class="per">30%</div>
+            </div>
+            <div class="box">
+              <div class="topic">HTML CSS</div>
+              <div class="per">50%</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- My Services Section Start -->
+    <section class="services" id="services">
+      <div class="content">
+        <div class="title"><span>Pelayanan</span></div>
+        <div class="boxes">
+            <div class="box">
+                <div class="icon">
+                  <i class="fas fa-desktop"></i>
+                </div>
+                <div class="topic">MY SHOP</div>
+              
+                <p>
+                  Butuh aplikasi canggih dan inovatif? <br>
+                  tersedia berbagai program mulai dari aplikasi, sistem pakar, sistem penunjang keputusan , klasifikasi , citra computer vision, machine learning, data set, BOT, sampai program sederhana CRUD semua tersedia 
+                  klik tombol di bawah untuk detailnya
+                </p>
+                <div class="button">
+                  <a href="shoplist.html">
+                    <button>Lihat Produk</button>
+                  </a>
+                </div>
+                
+              </div>
+              
+              <div class="box">
+                <div class="icon">
+                  <i class="fas fa-paint-brush"></i>
+                </div>mvc
+                <div class="topic">GUDANG TOOLS</div>
+                <p>
+                  Tools dan gudang web keren, anda bisa mendapatkan websit website lifehack yang keren dan tentunya berguna dalam mempermudah sesuatu klik tombol di bawah untuk menjelajahi tools dan web web keren
+                </p>
+                <div class="button">
+                  <a href="tools.html">
+                    <button>Lihat</button>
+                  </a>
+                </div>
+              </div>
+              
+              <div class="box">
+                <div class="icon">
+                  <i class="fas fa-code"></i>
+                </div>
+                <div class="topic">FREE SOURCE CODE</div>
+                <p>
+                  Dapatkan source code gratis di sini 
+                  project iseng iseng yang saya kerjakan ketika memiliki waktu luang akan saya bagikan secara gratis di sini anda dapat mendownload dan mengunakanya secara gratis
+                </p>
+                <div class="button">
+                  <a href="freesourcecode.html">
+                    <button>Lihat Produk</button>
+                  </a>
+                </div>
+              </div>
+              
+
+        </div>
+      </div>
+    </section>
+    <!-- Contact Me section Start -->
+    <section class="contact" id="contact">
+      <div class="content">
+        <div class="title"><span>BEASISWA</span></div>
+        <div class="text">
+          <div class="topic">PUNYA INFORMASI BESASISWA UNTUK SAYA ?</div>
+          <p>Hai! Jika Anda memiliki informasi mengenai beasiswa atau ingin memberikan dukungan untuk pendidikan saya, Anda dapat melihat proposal beasiswa atau mendukung saya secara personal di halaman berikut ini. Saya sangat menghargai setiap bentuk dukungan yang diberikan, karena hal ini akan membantu saya dalam menempuh pendidikan dengan lebih baik.</p>
+          <div class="button">
+            <a href="beasiswa.html">
+              <button>Dukung saya</button>
+            </a>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+    <!-- Footer Section Start -->
+    <footer>
+      <div class="text">
+        <!-- <span>Created By <a href="#">CodingLab</a> | &#169; 2021 All Rights Reserved</span> -->
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
+<script>
+    // Sticky Navigation Menu
+let nav = document.querySelector("nav");
+let scrollBtn = document.querySelector(".scroll-button a");
+// Show/hide sticky navigation and scroll button based on scroll position
+window.onscroll = function () {
+  if (document.documentElement.scrollTop > 20) {
+    nav.classList.add("sticky");
+    scrollBtn.style.display = "block";
+  } else {
+    nav.classList.remove("sticky");
+    scrollBtn.style.display = "none";
+  }
+};
+// Side Navigation Menu
+let body = document.querySelector("body");
+let navBar = document.querySelector(".navbar");
+let menuBtn = document.querySelector(".menu-btn");
+let cancelBtn = document.querySelector(".cancel-btn");
+// Open side navigation
+menuBtn.onclick = function () {
+  navBar.classList.add("active");
+  menuBtn.style.opacity = "0";
+  menuBtn.style.pointerEvents = "none";
+  body.style.overflow = "hidden";
+  scrollBtn.style.pointerEvents = "none";
+};
+const hideNavMenu = () => {
+  navBar.classList.remove("active");
+  menuBtn.style.opacity = "1";
+  menuBtn.style.pointerEvents = "auto";
+  body.style.overflow = "auto";
+  scrollBtn.style.pointerEvents = "auto";
+};
+// Close side navigation
+cancelBtn.onclick = hideNavMenu;
+// Close side navigation when a menu link is clicked
+let navLinks = document.querySelectorAll(".menu li a");
+navLinks.forEach((link) => {
+  link.addEventListener("click", hideNavMenu);
+});
+</script>
