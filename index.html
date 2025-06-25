@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bagus Wirayuda - Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+  <!-- Modal Welcome -->
+  <div id="welcomeModal" class="modal-glass" style="display:none;">
+    <div class="modal-glass-content">
+      <button id="closeModalBtn" class="modal-glass-close">&times;</button>
+      <div class="modal-glass-icon">
+        <img src="https://img.icons8.com/fluency/96/briefcase.png" alt="Welcome"/>
+      </div>
+      <h2 class="modal-glass-title">Selamat Datang HRD PT Pama Persada Nusantara</h2>
+      <p class="modal-glass-desc">Terima kasih telah mengunjungi website portfolio saya. Semoga informasi yang disajikan dapat memberikan gambaran tentang kemampuan dan pengalaman saya. Silakan jelajahi lebih lanjut, dan jangan ragu untuk menghubungi saya jika ada pertanyaan atau kerjasama.</p>
+      <a href="surat_lamaran.pdf" download class="btn btn-primary modal-glass-btn">Download Surat Lamaran</a>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <a href="#home">BW</a>
+      </div>
+      <ul class="nav-menu">
+        <li><a href="#home" class="nav-link">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+      <button id="darkModeToggle" class="btn btn-secondary" title="Toggle dark mode" style="margin-left:1rem;"><i class="fas fa-moon"></i></button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-container">
+      <div class="hero-content">
+        <h1 class="hero-title">Bagus Wirayuda</h1>
+        <p class="hero-subtitle">Full Stack Developer & IT Service</p>
+        <p class="hero-description">Dengan teknologi semua jadi mudah</p>
+        <div class="hero-buttons">
+          <a href="#projects" class="btn btn-primary">View My Work</a>
+          <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+          <a href="#contact" class="btn btn-hire">Hire Me</a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img src="foto.jpg" alt="Foto Bagus Wirayuda" class="profile-photo" />
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about">
+    <div class="container">
+      <h2 class="section-title">About Me</h2>
+      <div class="about-content">
+        <div class="about-text">
+          <p>Saya adalah individu yang memiliki minat di bidang teknologi informasi yang memiliki kemampuan kuat dalam layanan dan dukungan TI. Berpengalaman dalam mengelola dan mengatasi berbagai permasalahan software pada perangkat komputer maupun mobile, serta memahami sistem operasi dengan sangat baik. Saya terampil dalam penggunaan Microsoft Office (Word, Excel, PowerPoint), serta memiliki keahlian di bidang pengembangan web (Laravel, Django, Flask, CodeIgniter) dan aplikasi (Kotlin, Flutter, WebView).</p>
+          <p>Selain itu, saya menguasai backend (Python, PHP, C++), frontend (HTML, CSS, Bootstrap, Tailwind CSS), serta database (MySQL, PostgreSQL). Saya memiliki kemampuan analisis dan pemecahan masalah yang baik, terbiasa melakukan riset mandiri sebelum meminta bantuan, serta mampu memimpin dan membimbing anggota tim. Kemampuan komunikasi, public speaking, dan mengajar menjadi nilai tambah yang mendukung saya dalam memberikan layanan IT secara profesional</p>
+          <div class="about-actions">
+            <a href="cv.pdf" class="btn btn-download" download>
+              <i class="fas fa-download"></i> Download CV
+            </a>
+          </div>
+        </div>
+        <div class="about-stats">
+          <div class="stat-item">
+            <h3>3+</h3>
+            <p>Tahun Pengalaman</p>
+          </div>
+          <div class="stat-item">
+            <h3>10+</h3>
+            <p>Project Selesai</p>
+          </div>
+          <div class="stat-item">
+            <h3>5+</h3>
+            <p>Tim Dipimpin</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="skills">
+    <div class="container">
+      <h2 class="section-title">Skills & Expertise</h2>
+      <div class="skills-grid">
+        <div class="skill-category">
+          <h3><i class="fas fa-code"></i> Web Development</h3>
+          <div class="skill-items">
+            <span class="skill-tag">Laravel</span>
+            <span class="skill-tag">Django</span>
+            <span class="skill-tag">Flask</span>
+            <span class="skill-tag">CodeIgniter</span>
+            <span class="skill-tag">HTML/CSS</span>
+            <span class="skill-tag">Bootstrap</span>
+            <span class="skill-tag">Tailwind</span>
+          </div>
+        </div>
+        <div class="skill-category">
+          <h3><i class="fas fa-mobile-alt"></i> Mobile Development</h3>
+          <div class="skill-items">
+            <span class="skill-tag">Kotlin</span>
+            <span class="skill-tag">Flutter</span>
+            <span class="skill-tag">WebView</span>
+          </div>
+        </div>
+        <div class="skill-category">
+          <h3><i class="fas fa-database"></i> Backend & Database</h3>
+          <div class="skill-items">
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">PHP</span>
+            <span class="skill-tag">C++</span>
+            <span class="skill-tag">MySQL</span>
+            <span class="skill-tag">PostgreSQL</span>
+          </div>
+        </div>
+        <div class="skill-category">
+          <h3><i class="fas fa-tools"></i> Tools & Others</h3>
+          <div class="skill-items">
+            <span class="skill-tag">Microsoft Office</span>
+            <span class="skill-tag">System Administration</span>
+            <span class="skill-tag">Troubleshooting</span>
+            <span class="skill-tag">Public Speaking</span>
+            <span class="skill-tag">Team Leadership</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="projects">
+    <div class="container">
+      <h2 class="section-title">Featured Projects</h2>
+      <div class="projects-grid">
+        <div class="project-card">
+          <div class="project-image">
+            <i class="fas fa-robot"></i>
+          </div>
+          <div class="project-content">
+            <h3>Bot Makalah</h3>
+            <p>Automated system for generating academic papers from titles using AI and natural language processing.</p>
+            <div class="project-tech">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">AI/ML</span>
+              <span class="tech-tag">NLP</span>
+            </div>
+          </div>
+        </div>
+        <div class="project-card">
+          <div class="project-image">
+            <i class="fas fa-browser"></i>
+          </div>
+          <div class="project-content">
+            <h3>Edge Bot</h3>
+            <p>Browser automation tool for daily tasks, improving productivity through intelligent web scraping and automation.</p>
+            <div class="project-tech">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">Selenium</span>
+              <span class="tech-tag">Automation</span>
+            </div>
+          </div>
+        </div>
+        <div class="project-card">
+          <div class="project-image">
+            <i class="fas fa-shield-alt"></i>
+          </div>
+          <div class="project-content">
+            <h3>Website Security Testing</h3>
+            <p>Led a team in comprehensive security testing and vulnerability assessment for web applications.</p>
+            <div class="project-tech">
+              <span class="tech-tag">Security</span>
+              <span class="tech-tag">Testing</span>
+              <span class="tech-tag">Team Leadership</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+  <section id="experience" class="experience">
+    <div class="container">
+      <h2 class="section-title">Experience & Education</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-content">
+            <h3>Team Leader - Software Development</h3>
+            <p class="timeline-date">2023 - Present</p>
+            <p>Leading software development teams, managing projects, and mentoring junior developers in various technology stacks.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-content">
+            <h3>Security Testing Lead</h3>
+            <p class="timeline-date">2022 - 2023</p>
+            <p>Led comprehensive security testing initiatives for web applications, ensuring robust security measures.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-content">
+            <h3>S1 Sistem Informasi - USN Kolaka</h3>
+            <p class="timeline-date">2020 - 2024</p>
+            <p>Graduated with focus on information systems, software development, and project management.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-content">
+            <h3>Teknik Komputer Jaringan - SMK 1 Kolaka</h3>
+            <p class="timeline-date">2016 - 2019</p>
+            <p>Foundation in computer networking and system administration.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <h2 class="section-title">Get In Touch</h2>
+      <div class="contact-content">
+        <div class="contact-info">
+          <div class="contact-item">
+            <i class="fas fa-phone"></i>
+            <div>
+              <h3>Phone</h3>
+              <p>0813 5632 7655</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-envelope"></i>
+            <div>
+              <h3>Email</h3>
+              <p>wirayuda101101@gmail.com</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <div>
+              <h3>Location</h3>
+              <p>Jl. Bendungan, Lalomba, Kolaka</p>
+            </div>
+          </div>
+        </div>
+        <div class="contact-form">
+          <form>
+            <div class="form-group">
+              <input type="text" placeholder="Your Name" required>
+            </div>
+            <div class="form-group">
+              <input type="email" placeholder="Your Email" required>
+            </div>
+            <div class="form-group">
+              <textarea placeholder="Your Message" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <p>&copy; 2025 Bagus Wirayuda. All rights reserved.</p>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+          <a href="#"><i class="fab fa-github"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    const hamburger = document.querySelector(".hamburger");
+    const navMenu = document.querySelector(".nav-menu");
+
+    hamburger.addEventListener("click", () => {
+      hamburger.classList.toggle("active");
+      navMenu.classList.toggle("active");
+    });
+
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+
+    // Close mobile menu when clicking on a link
+    document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", () => {
+      hamburger.classList.remove("active");
+      navMenu.classList.remove("active");
+    }));
+
+    // Dark mode toggle
+    const darkModeToggle = document.getElementById('darkModeToggle');
+    const body = document.body;
+    // Load dark mode preference
+    if (localStorage.getItem('darkMode') === 'enabled') {
+      body.classList.add('dark-mode');
+    }
+    darkModeToggle.addEventListener('click', () => {
+      body.classList.toggle('dark-mode');
+      if (body.classList.contains('dark-mode')) {
+        localStorage.setItem('darkMode', 'enabled');
+        darkModeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+      } else {
+        localStorage.setItem('darkMode', 'disabled');
+        darkModeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+      }
+    });
+    // Set icon on load
+    if (body.classList.contains('dark-mode')) {
+      darkModeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+    } else {
+      darkModeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+    }
+
+    // Modal Welcome
+    window.addEventListener('DOMContentLoaded', function() {
+      const modal = document.getElementById('welcomeModal');
+      const closeBtn = document.getElementById('closeModalBtn');
+      if (modal && closeBtn) {
+        modal.style.display = 'flex';
+        closeBtn.onclick = function() {
+          modal.style.display = 'none';
+        };
+        // Optional: close modal when clicking outside the modal content
+        modal.onclick = function(e) {
+          if (e.target === modal) {
+            modal.style.display = 'none';
+          }
+        };
+      }
+    });
+  </script>
+</body>
+</html>
